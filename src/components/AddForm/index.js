@@ -46,7 +46,6 @@ function AddForm () {
   const onProductInputChange = e => setProduct(e.target.value)
   const onNotesInputChange = e => setNotes(e.target.value)
   const onPriceInputChange = e => setPrice(+e.target.value)
-  const onInputEnter = e => onSubmit()
   const onResetClick = e => {
     e.preventDefault()
     resetAll()
@@ -81,7 +80,6 @@ function AddForm () {
             onChange={onNameInputChange}
             onHintClick={onNameHintClick}
             onBlur={() => validateName()}
-            onEnter={onInputEnter}
           ></Input>
         </Col>
       </Row>
@@ -94,7 +92,6 @@ function AddForm () {
             value={product}
             onChange={onProductInputChange}
             onBlur={() => validateProduct()}
-            onEnter={onInputEnter}
           ></Input>
         </Col>
         <Col>
@@ -108,7 +105,6 @@ function AddForm () {
             min={0}
             onChange={onPriceInputChange}
             onBlur={() => validatePrice()}
-            onEnter={onInputEnter}
           ></Input>
         </Col>
       </Row>
@@ -121,7 +117,6 @@ function AddForm () {
             value={notes}
             onChange={onNotesInputChange}
             onBlur={() => validateNotes()}
-            onEnter={onInputEnter}
           ></Input>
         </Col>
       </Row>

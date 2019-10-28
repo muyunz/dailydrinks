@@ -23,7 +23,7 @@ function Hint ({ hints, onItemClick }) {
 
 function Input ({ value, label = '', type = 'text', hints = [], min = null, max = null, onChange, onFocus, onHintClick, onEnter, onBlur, placeholder, errors = [], block }) {
   const [focus, setFocus] = useState(false)
-  const onKeyUp = e => e.keyCode === 13 && onEnter(e)
+  const onKeyUp = e => e.keyCode === 13 && onEnter && onEnter(e)
   const onHintItemClick = hint => onHintClick(hint)
   const onInputFocus = e => {
     setFocus(true)
