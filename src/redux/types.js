@@ -1,3 +1,8 @@
-export const ORDER_ADD = 'ORDER_ADD';
-export const ORDER_DELETE = 'ORDER_DELETE';
-export const ORDER_UPDATE = 'ORDER_UPDATE';
+export const OPEN_ADD_DRAWER = 'OPEN_ADD_DRAWER'
+export const CLOSE_ADD_DRAWER = 'CLOSE_ADD_DRAWER'
+
+export const ADD_ORDER = 'ADD_ORDER';
+export const DELETE_ORDER = 'DELETE_ORDER';
+export const EDIT_ORDER = 'EDIT_ORDER';
+export const UPDATE_ORDER = 'UPDATE_ORDER';
+export const CHANGE_ORDER_LIST_TAB = 'CHANGE_ORDER_LIST_TAB'

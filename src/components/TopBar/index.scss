@@ -1,0 +1,17 @@
+@import "@/styles/variables.scss";
+
+.top-bar {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #cecece;
+  padding: 0 20px;
+
+  &__logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: $primary-color;
+  }
+}

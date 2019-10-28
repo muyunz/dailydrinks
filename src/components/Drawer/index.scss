@@ -1,0 +1,25 @@
+.drawer {
+  display: flex;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 450px;
+  background: #fff;
+  transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+  box-shadow: 0 1px 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &--float {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  &-content {
+    width: 100%;
+  }
+
+  &--open {
+    cursor: normal;
+  }
+}

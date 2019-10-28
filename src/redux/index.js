@@ -3,16 +3,17 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 import rootReducer from './rootReducers.js'
 
-let storeEnhancers
+// let storeEnhancers
 
-if (process.env.NODE_ENV === 'production') {
-  // storeEnhancers = compose(applyMiddleware(thunk))
-} else {
-  // storeEnhancers = compose(composeWithDevTools(applyMiddleware(thunk)))
-}
+// if (process.env.NODE_ENV === 'production') {
+//   storeEnhancers = compose(applyMiddleware(thunk))
+// } else {
+//   storeEnhancers = compose(composeWithDevTools(applyMiddleware(thunk)))
+// }
 
 const configureStore = (initialState = {}) => {
-  const store = createStore(rootReducer, initialState, storeEnhancers)
+  // const store = createStore(rootReducer, initialState, storeEnhancers)
+  const store = createStore(rootReducer, initialState)
   if (module.hot && process.env.NODE_ENV !== 'production') {
     module.hot.accept('./rootReducers', () => {
       console.log('replacing reducer...')

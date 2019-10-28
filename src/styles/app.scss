@@ -1,7 +1,31 @@
-@import "./reset.css";
+@import "./normalize.css";
 @import "./variables.scss";
 
-body {
-  background-color: #ccc;
-  color: $secondary-color;
+.app {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  .main-body {
+    flex: 1;
+    overflow: auto;
+    height: 100vh;
+  }
+
+  .add-form-wrapper {
+    background: #fff;
+    border-bottom: 1px solid #cecece;
+    padding: 25px;
+  }
+
+  .tabs {
+    padding: 10px 6px;
+  }
+
+  .empty-orders {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #ccc;
+    padding: 20px 0;
+  }
 }

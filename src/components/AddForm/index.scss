@@ -1,0 +1,22 @@
+@import "@/styles/variables.scss";
+
+.add-form {
+  background: #fff;
+  padding: 15px;
+
+  &__actions {
+    .col {
+      align-items: center;
+      &:nth-child(1) {
+        justify-content: flex-start;
+        a {
+          color: $danger-color;
+          cursor: pointer;
+        }
+      }
+      &:nth-child(2) {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

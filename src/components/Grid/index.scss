@@ -1,0 +1,44 @@
+@import "@/styles/variables.scss";
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: $grid-gutter * 1/2 * -1;
+  margin-right: $grid-gutter * 1/2 * -1;
+}
+
+.col {
+  box-sizing: border-box;
+  display: flex;
+  transition: 0.2s all ease;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  padding-right: $grid-gutter * 1/2;
+  padding-left: $grid-gutter * 1/2;
+}
+
+@each $breakpoint in $breakpoints {
+  $name: nth($breakpoint, 1);
+  $size: nth($breakpoint, 2);
+  $container: nth($breakpoint, 3);
+  @media only screen and (min-width: $size) {
+    .container {
+      max-width: $container;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .col-#{$name} {
+      @for $i from 1 through 12 {
+        &-#{$i} {
+          flex-grow: 0;
+          flex-basis: calc(100% * #{$i} * 1/12 - $grid-gutter);
+        }
+      }
+    }
+  }
+}

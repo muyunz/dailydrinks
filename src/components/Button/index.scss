@@ -1,0 +1,88 @@
+@import "@/styles/variables.scss";
+
+.btn {
+  $btn: &;
+  cursor: pointer;
+  min-width: 100px;
+  border: 1px solid #cecece;
+  background: #fff;
+  padding: 10px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+
+  &:hover {
+    color: darken($primary-color, 5%);
+    border: 1px solid darken($primary-color, 5%);
+  }
+
+  &:active {
+    color: darken($primary-color, 10%);
+    border: 1px solid darken($primary-color, 10%);
+  }
+
+  &--small {
+    min-width: 60px;
+    padding: 7px 9px;
+    font-size: 12px;
+  }
+
+  &--primary {
+    border: 1px solid transparent;
+    background: $primary-color;
+    color: #fff;
+
+    &#{$btn}--ghost {
+      background: none;
+      border: 1px solid $primary-color;
+      color: $primary-color;
+      &:hover {
+        background: darken($primary-color, 5%);
+        border-color: darken($primary-color, 5%);
+        color: #fff;
+      }
+      &:active {
+        border-color: darken($primary-color, 10%);
+        background: darken($primary-color, 10%);
+        color: #fff;
+      }
+    }
+    &:hover {
+      color: #fff;
+      background: darken($primary-color, 5%);
+    }
+    &:active {
+      color: #fff;
+      background: darken($primary-color, 10%);
+    }
+  }
+  &--danger {
+    border: 1px solid transparent;
+    background: $danger-color;
+    color: #fff;
+
+    &#{$btn}--ghost {
+      background: none;
+      border: 1px solid $danger-color;
+      color: $danger-color;
+      &:hover {
+        background: darken($danger-color, 5%);
+        border-color: darken($danger-color, 5%);
+        color: #fff;
+      }
+      &:active {
+        border-color: darken($danger-color, 10%);
+        background: darken($danger-color, 10%);
+        color: #fff;
+      }
+    }
+    &:hover {
+      color: #fff;
+      background: darken($danger-color, 5%);
+    }
+  
+    &:active {
+      color: #fff;
+      background: darken($danger-color, 10%);
+    }
+  }
+}

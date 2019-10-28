@@ -1,2 +1,13 @@
-$primary-color: #1C87C7;
+$primary-color: #1e60dc;
 $secondary-color: #1A2D38;
+$danger-color: #FF0022;
+$success-color: #20BF55;
+
+$grid-gutter: 20px;
+
+// screen max-width container-width
+$breakpoints:
+  sm 576px 61em,
+  md 768px 76em,
+  lg 992px 80em,
+  xl 1200px 80em;

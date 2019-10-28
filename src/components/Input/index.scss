@@ -1,0 +1,85 @@
+@import "@/styles/variables";
+
+.input {
+  position: relative;
+  width: 200px;
+  height: 39px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px 15px 3px 15px;
+  transition: all .2s linear;
+  margin-bottom: 20px;
+
+  label {
+    color: #666;
+  }
+
+  input {
+    border: none;
+    background: none;
+    padding: 5px 0;
+    color: #444;
+  }
+
+  .input-error {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    color: $danger-color;
+  }
+
+  .input-hint {
+    position: absolute;
+    top: calc(100% - 5px);
+    left: 0;
+    right: 0;
+    margin: 0 -1px;
+    background: #ccc;
+    border: 1px solid #ccc;
+    border-top-width: 0;
+    border-radius: 5px;
+    z-index: 99;
+    // box-shadow: 1 1 1 1 rgba(0, 0, 0, 0.5);
+
+    &__item {
+      cursor: pointer;
+      padding: 10px 15px;
+      background: #fff;
+      &:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      &:hover {
+        background: #f2f2f2;
+      }
+    }
+  }
+
+  &:focus-within:not(&--error) {
+    background: rgba($primary-color, 0.1);
+    border: 1px solid $primary-color;
+    input {
+      color: #000;
+    }
+  }
+
+  &--block {
+    width: 100%;
+  }
+
+  &--error {
+    background: rgba($danger-color, 0.1);
+    border: 1px solid $danger-color;
+    margin-bottom: 25px !important;
+
+    label {
+      color: $danger-color;
+    }
+    input {
+      color: #000;
+    }
+  }
+}
